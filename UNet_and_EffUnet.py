@@ -199,3 +199,30 @@ def EfficientUNet(input_shape):
 model = EfficientUNet((256, 256,2))
 
 model.compile(loss='mse', optimizer=tf.keras.optimizers.Adam(learning_rate=0.001))
+
+##Training, assume that you have data ready
+import tensorflow as tf
+from tensorflow.keras.callbacks import EarlyStopping
+
+# Define the early stopping callback
+early_stopping = EarlyStopping(monitor='val_loss', patience=20)
+
+# Create the training and validation datasets
+train_ds = tf.data.Dataset.from_tensor_slices((x_train, y_train))
+val_ds = tf.data.Dataset.from_tensor_slices((x_val, y_val))
+
+# Define the batch size and preprocessing function
+BATCH_SIZE = 4
+
+def preprocess_data(image, label):
+    image = tf.cast(image, tf.float32)
+    label = tf.cast(label, tf.float32)
+    return image, label
+
+# Apply the preprocessing function, shuffle, batch, prefetch, and repeat the datasets
+train_ds = train_ds.map(preprocess_data).shuffle(buffer_size=len(x_train)).batch(BATCH_SIZE).prefetch(tf.data.experimental.AUTOTUNE)
+val_ds = val_ds.map(preprocess_data).batch(BATCH_SIZE).prefetch(tf.data.experimental.AUTOTUNE)
+
+#model.compile(loss='mse', optimizer=tf.keras.optimizers.Adam(learning_rate=0.0001))
+# Train the model using the iterators and the early stopping callback
+history = model.fit(train_ds, validation_data=val_ds, epochs=20)
