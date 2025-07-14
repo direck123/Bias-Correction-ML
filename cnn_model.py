@@ -115,6 +115,9 @@ model.compile(loss='mse', optimizer=tf.keras.optimizers.Adam(learning_rate=0.000
 # Print model summary
 model.summary()
 
+
+## Model Unet version 2
+
 OUTPUT_CHANNELS = 1
 def downsample(filters, size, apply_batchnorm=True):
   initializer = tf.random_normal_initializer(0., 0.02)
