@@ -27,16 +27,34 @@ The models integrate digital elevation data to account for orographic effects, w
 ## 🧠 Model Architectures
 
 ### U-Net
+
 <img width="100%" alt="U-Net model" src="https://github.com/user-attachments/assets/d95b2592-a988-4530-a9c7-1ce93156f2cb" />
 
-### Efficient-UNet
-<img width="100%" alt="Efficient-UNet model" src="https://github.com/user-attachments/assets/839faeef-cd90-4456-9598-28292357a82b" />
-
-### cGAN
-<img width="100%" alt="cGAN model" src="https://github.com/user-attachments/assets/bd292c83-07d8-459a-ae88-4d888f7193ca" />
+**Figure 1:** (a) U-Net architecture for bias correction, and (b) Conv2D and Conv2DTranspose blocks.
 
 ---
 
+### Efficient-UNet
+
+<img width="100%" alt="Efficient-UNet model" src="https://github.com/user-attachments/assets/839faeef-cd90-4456-9598-28292357a82b" />
+
+**Figure 2:** (a) Proposed Efficient-UNet architecture for bias correction. The encoder includes (b) 7 blocks of EfficientNet B4. The decoder consists of a sequence of Up-convolution and Concatenation layers.
+
+---
+
+### cGAN
+
+<img width="100%" alt="cGAN model" src="https://github.com/user-attachments/assets/bd292c83-07d8-459a-ae88-4d888f7193ca" />
+
+**Figure 3:** (a) Conditional Generative Adversarial Network (cGAN) framework for image-to-image translation with (b) U-Net as Generator and (c) PatchGAN classifier as Discriminator, adopted from Isola et al. (2017).
+
+---
+
+## 📊 Evaluation Example
+
+<img width="100%" alt="Evaluation results" src="https://github.com/user-attachments/assets/83d022cf-3b8a-4a34-9d63-b1c04fe412ae" />
+
+---
 
 ## 📌 Citation
 
