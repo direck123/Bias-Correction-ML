@@ -18,6 +18,12 @@ The models integrate digital elevation data to account for orographic effects, w
 
 ---
 
+## 📊 Methodology
+
+<img width="100%" alt="Evaluation results" src="https://github.com/user-attachments/assets/83d022cf-3b8a-4a34-9d63-b1c04fe412ae" />
+
+---
+
 ## 🧠 Model Architectures
 
 ### U-Net
@@ -31,11 +37,6 @@ The models integrate digital elevation data to account for orographic effects, w
 
 ---
 
-## 📊 Evaluation Example
-
-<img width="100%" alt="Evaluation results" src="https://github.com/user-attachments/assets/83d022cf-3b8a-4a34-9d63-b1c04fe412ae" />
-
----
 
 ## 📌 Citation
 
@@ -43,4 +44,4 @@ Dao, V., Arellano, C. J., Nguyen, P., Almutlaq, F., Hsu, K., & Sorooshian, S. (2
 
 ---
 
-Let me know if you'd like help turning this into a `README.md` or formatting it for a GitHub Pages site!
+
